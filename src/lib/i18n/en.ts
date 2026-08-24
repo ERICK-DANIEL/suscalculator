@@ -15,7 +15,7 @@ export const en: Dictionary = {
     notice: "Your data is stored only in your browser",
   },
   dashboard: {
-    title: "Projects panel",
+    title: "Your SUS projects panel",
     subtitle:
       "Manage and evaluate your System Usability Scale metrics for every initiative.",
     newProject: "New project",

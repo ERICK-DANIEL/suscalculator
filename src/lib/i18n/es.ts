@@ -13,7 +13,7 @@ export const es = {
     notice: "Los datos se guardan únicamente en tu navegador",
   },
   dashboard: {
-    title: "Panel de proyectos",
+    title: "Panel de proyectos SUS",
     subtitle:
       "Gestiona y evalúa tus métricas de System Usability Scale en cada iniciativa.",
     newProject: "Nuevo proyecto",

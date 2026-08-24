@@ -15,7 +15,7 @@ export const de: Dictionary = {
     notice: "Deine Daten werden ausschließlich in deinem Browser gespeichert",
   },
   dashboard: {
-    title: "Projektübersicht",
+    title: "Übersicht deiner SUS-Projekte",
     subtitle:
       "Verwalte und bewerte deine System-Usability-Scale-Metriken für jede Initiative.",
     newProject: "Neues Projekt",

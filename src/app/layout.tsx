@@ -17,12 +17,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://suscalculator.vercel.app"),
   title: {
     default: "SUS — Calculadora System Usability Scale",
     template: "%s · SUS",
   },
   description:
     "Crea proyectos, registra las respuestas de tus participantes al cuestionario SUS y obtén puntuaciones sobre 100 con grados y aceptabilidad. Los datos se guardan en tu navegador.",
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "/",
+    siteName: "SUS — Calculadora System Usability Scale",
+    title: "SUS — Calculadora System Usability Scale",
+    description:
+      "Cuestionario SUS guiado, puntuación automática sobre 100 y grados de aceptabilidad para tus tests de usabilidad. Gratis y sin registro.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SUS — Calculadora System Usability Scale",
+    description:
+      "Cuestionario SUS guiado, puntuación automática sobre 100 y grados de aceptabilidad para tus tests de usabilidad.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

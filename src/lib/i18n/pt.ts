@@ -15,7 +15,7 @@ export const pt: Dictionary = {
     notice: "Os dados ficam salvos apenas no seu navegador",
   },
   dashboard: {
-    title: "Painel de projetos",
+    title: "Painel de projetos SUS",
     subtitle:
       "Gerencie e avalie suas métricas de System Usability Scale em cada iniciativa.",
     newProject: "Novo projeto",

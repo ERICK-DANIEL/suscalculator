@@ -15,7 +15,7 @@ export const fr: Dictionary = {
     notice: "Les données sont enregistrées uniquement dans votre navigateur",
   },
   dashboard: {
-    title: "Tableau des projets",
+    title: "Tableau de bord des projets",
     subtitle:
       "Gérez et évaluez vos métriques System Usability Scale pour chaque initiative.",
     newProject: "Nouveau projet",
