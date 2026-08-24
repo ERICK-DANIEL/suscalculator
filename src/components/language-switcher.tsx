@@ -1,19 +1,18 @@
 "use client";
 
 import { LOCALES, dictionaries, setLocale, useI18n } from "@/lib/i18n";
-import { IconLanguage } from "./icons";
+import { IconExpandMore } from "./icons";
 
 export function LanguageSwitcher() {
   const { locale } = useI18n();
 
   return (
-    <label className="relative inline-flex items-center text-on-surface-variant">
+    <label className="group relative inline-flex items-center">
       <span className="sr-only">{dictionaries[locale].nav.language}</span>
-      <IconLanguage className="pointer-events-none absolute left-2.5 h-4 w-4" />
       <select
         value={locale}
         onChange={(e) => setLocale(e.target.value as (typeof LOCALES)[number])}
-        className="cursor-pointer appearance-none rounded-lg border border-outline-variant/70 bg-surface-container-lowest py-1.5 pr-7 pl-8 text-body-sm font-medium text-on-surface outline-none transition hover:border-outline focus:border-active-indicator focus:ring-4 focus:ring-active-indicator/10"
+        className="cursor-pointer appearance-none rounded-md bg-transparent py-1.5 pr-6 pl-2 text-label-caps uppercase font-medium text-on-surface-variant outline-none transition-colors hover:text-on-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-active-indicator"
       >
         {LOCALES.map((code) => (
           <option key={code} value={code}>
@@ -21,6 +20,7 @@ export function LanguageSwitcher() {
           </option>
         ))}
       </select>
+      <IconExpandMore className="pointer-events-none absolute right-0.5 h-4 w-4 text-on-surface-variant transition-colors group-hover:text-on-surface" />
     </label>
   );
 }

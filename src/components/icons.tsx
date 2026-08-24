@@ -10,6 +10,7 @@ import {
   MdDeleteOutline,
   MdDownload,
   MdEdit,
+  MdExpandMore,
   MdFolderOpen,
   MdLanguage,
   MdMenu,
@@ -38,6 +39,7 @@ export const IconClose = makeIcon(MdClose);
 export const IconDelete = makeIcon(MdDeleteOutline);
 export const IconDownload = makeIcon(MdDownload);
 export const IconEdit = makeIcon(MdEdit);
+export const IconExpandMore = makeIcon(MdExpandMore);
 export const IconFolderOpen = makeIcon(MdFolderOpen);
 export const IconLanguage = makeIcon(MdLanguage);
 export const IconMenu = makeIcon(MdMenu);

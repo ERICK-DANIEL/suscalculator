@@ -64,7 +64,9 @@ export function NavBar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <LanguageSwitcher />
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
           <button
             type="button"
             aria-label={menuOpen ? t.nav.closeMenu : t.nav.openMenu}
@@ -83,7 +85,7 @@ export function NavBar() {
 
       <div
         className={`overflow-hidden transition-[max-height] duration-300 ease-out md:hidden ${
-          menuOpen ? "max-h-64" : "max-h-0"
+          menuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
         <div className="flex flex-col gap-1 border-t border-outline-variant/50 bg-surface-container-lowest/95 px-5 py-4 backdrop-blur-md">
@@ -108,6 +110,12 @@ export function NavBar() {
               </Link>
             );
           })}
+          <div className="mt-2 flex items-center justify-between border-t border-outline-variant/50 px-3 pt-3">
+            <span className="text-label-caps uppercase text-on-surface-variant">
+              {t.nav.language}
+            </span>
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </nav>
