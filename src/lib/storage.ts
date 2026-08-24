@@ -52,9 +52,18 @@ function sanitizeProject(raw: unknown): SusProject | null {
 let cacheRaw: string | null = null;
 let cacheValue: SusProject[] = EMPTY;
 
+/** localStorage puede lanzar SecurityError si el almacenamiento está bloqueado. */
+function safeGetItem(key: string): string | null {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
 export function readProjects(): SusProject[] {
   if (typeof window === "undefined") return EMPTY;
-  const raw = window.localStorage.getItem(STORAGE_KEY);
+  const raw = safeGetItem(STORAGE_KEY);
   const key = raw ?? "";
   if (key === cacheRaw) return cacheValue;
   let value: SusProject[] = EMPTY;
@@ -97,8 +106,14 @@ export function useProjects(): { projects: SusProject[]; ready: boolean } {
 }
 
 function writeProjects(projects: SusProject[]): void {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
-  window.dispatchEvent(new Event(CHANGE_EVENT));
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
+    window.dispatchEvent(new Event(CHANGE_EVENT));
+  } catch {
+    // Sin almacenamiento disponible (modo privado/bloqueado): la app sigue
+    // funcionando con los datos en memoria hasta recargar.
+    window.dispatchEvent(new Event(CHANGE_EVENT));
+  }
 }
 
 function mutate(fn: (projects: SusProject[]) => SusProject[]): void {
