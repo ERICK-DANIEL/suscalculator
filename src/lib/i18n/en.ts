@@ -1,6 +1,5 @@
-import type { Dictionary } from "./es";
 
-export const en: Dictionary = {
+export const en = {
   nativeName: "English",
   nav: {
     calculator: "Calculator",
@@ -269,3 +268,5 @@ export const en: Dictionary = {
     finalCta: "Explore the guide",
   },
 };
+
+export type Dictionary = typeof en;

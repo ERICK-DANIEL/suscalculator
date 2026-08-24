@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { GuideContent } from "@/components/guide-content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Guía del System Usability Scale (SUS)" },
+  title: { absolute: "System Usability Scale Guide (SUS)" },
   description:
-    "Qué es la System Usability Scale, cómo se calcula paso a paso y cómo interpretar sus puntuaciones con adjetivos, grados y aceptabilidad.",
+    "What the System Usability Scale is, how it is calculated step by step and how to interpret its scores with adjectives, grades and acceptability.",
   alternates: { canonical: "/guia" },
 };
 

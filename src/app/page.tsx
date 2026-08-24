@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ProjectsDashboard } from "@/components/projects-grid";
 
 export const metadata: Metadata = {
-  title: { absolute: "Calculadora SUS: proyectos y evaluaciones de usabilidad" },
+  title: { absolute: "SUS Calculator: projects & usability evaluations" },
   description:
-    "Gestiona y evalúa tus métricas de System Usability Scale: crea proyectos, registra evaluaciones y obtén puntuaciones sobre 100 guardadas en tu navegador.",
+    "Manage and track your System Usability Scale metrics: create projects, record evaluations and get scores out of 100, stored in your browser.",
   alternates: { canonical: "/" },
 };
 
@@ -22,22 +22,22 @@ function AboutSus() {
           id="about-sus-title"
           className="font-headline text-headline-md text-on-surface"
         >
-          Qué es el System Usability Scale
+          What is the System Usability Scale?
         </h2>
         <p className="mt-4 text-body-lg text-on-surface-variant">
-          El SUS es un cuestionario de 10 preguntas creado por John Brooke en
-          1996 que mide la usabilidad percibida de cualquier producto digital
-          en menos de cinco minutos.
+          The SUS is a 10-question questionnaire created by John Brooke in 1996
+          that measures the perceived usability of any digital product in under
+          five minutes.
         </p>
         <p className="mt-3 text-body-lg text-on-surface-variant">
-          Esta calculadora registra las respuestas de tus participantes y las
-          convierte en una puntuación de 0 a 100 con grado, adjetivo y nivel de
-          aceptabilidad según Bangor, Kortum y Miller. Los datos se guardan en
-          tu navegador y puedes exportarlos a CSV.
+          This calculator records your participants&apos; responses and turns
+          them into a score out of 100 with a grade, an adjective and an
+          acceptability level based on Bangor, Kortum and Miller. Data is kept
+          in your browser and can be exported to CSV.
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <span className="text-label-caps uppercase text-on-surface-variant">
-            Disponible en
+            Available in
           </span>
           {LANGUAGES.map((lang) => (
             <span
@@ -49,19 +49,19 @@ function AboutSus() {
           ))}
         </div>
         <p className="mt-4 text-body-lg text-on-surface-variant">
-          ¿Primera vez con el método? Consulta la{" "}
+          First time with the method? Read the{" "}
           <Link
             href="/guia"
             className="font-semibold text-active-indicator underline decoration-active-indicator/30 underline-offset-4 hover:decoration-active-indicator"
           >
-            guía completa del SUS
+            complete SUS guide
           </Link>{" "}
-          o su{" "}
+          or its{" "}
           <Link
             href="/historia"
             className="font-semibold text-active-indicator underline decoration-active-indicator/30 underline-offset-4 hover:decoration-active-indicator"
           >
-            historia
+            history
           </Link>
           .
         </p>

@@ -1,17 +1,17 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { es, type Dictionary } from "./es";
-import { en } from "./en";
+import { en, type Dictionary } from "./en";
+import { es } from "./es";
 import { pt } from "./pt";
 import { fr } from "./fr";
 import { de } from "./de";
 
 export type { Dictionary };
 
-export const LOCALES = ["es", "en", "pt", "fr", "de"] as const;
+export const LOCALES = ["en", "es", "pt", "fr", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
-export const DEFAULT_LOCALE: Locale = "es";
+export const DEFAULT_LOCALE: Locale = "en";
 
 const STORAGE_KEY = "suscalculator.locale";
 

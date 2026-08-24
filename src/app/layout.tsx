@@ -19,31 +19,31 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://suscalculator.vercel.app"),
   title: {
-    default: "SUS — Calculadora System Usability Scale",
+    default: "SUS — System Usability Scale Calculator",
     template: "%s · SUS",
   },
   description:
-    "Crea proyectos, registra las respuestas de tus participantes al cuestionario SUS y obtén puntuaciones sobre 100 con grados y aceptabilidad. Los datos se guardan en tu navegador.",
+    "Create projects, record your participants' responses to the SUS questionnaire and get scores out of 100 with grades and acceptability. Data is stored in your browser.",
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "en_US",
     url: "/",
-    siteName: "SUS — Calculadora System Usability Scale",
-    title: "SUS — Calculadora System Usability Scale",
+    siteName: "SUS — System Usability Scale Calculator",
+    title: "SUS — System Usability Scale Calculator",
     description:
-      "Cuestionario SUS guiado, puntuación automática sobre 100 y grados de aceptabilidad para tus tests de usabilidad. Gratis y sin registro.",
+      "Guided SUS questionnaire, automatic scoring out of 100 and acceptability grades for your usability tests. Free, no sign-up.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SUS — Calculadora System Usability Scale",
+    title: "SUS — System Usability Scale Calculator",
     description:
-      "Cuestionario SUS guiado, puntuación automática sobre 100 y grados de aceptabilidad para tus tests de usabilidad.",
+      "Guided SUS questionnaire, automatic scoring out of 100 and acceptability grades for your usability tests.",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className="h-full">
+    <html lang="en" className="h-full">
       <body
         className={`${hanken.variable} ${inter.variable} flex min-h-screen flex-col bg-gradient-to-br from-mesh-gradient-start to-mesh-gradient-end pt-16 text-body-lg text-on-background antialiased`}
       >

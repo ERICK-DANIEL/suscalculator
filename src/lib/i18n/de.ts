@@ -1,4 +1,4 @@
-import type { Dictionary } from "./es";
+import type { Dictionary } from "./en";
 
 export const de: Dictionary = {
   nativeName: "Deutsch",

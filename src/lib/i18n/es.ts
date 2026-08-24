@@ -1,4 +1,5 @@
-export const es = {
+import type { Dictionary } from "./en";
+export const es: Dictionary = {
   nativeName: "Español",
   nav: {
     calculator: "Calculadora",
@@ -272,4 +273,3 @@ export const es = {
   },
 };
 
-export type Dictionary = typeof es;

@@ -123,7 +123,7 @@ function mutate(fn: (projects: SusProject[]) => SusProject[]): void {
 export function createProject(name: string, description = ""): SusProject {
   const project: SusProject = {
     id: makeId(),
-    name: name.trim() || "Proyecto sin nombre",
+    name: name.trim() || "Untitled project",
     description: description.trim(),
     createdAt: new Date().toISOString(),
     entries: [],

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { HistoryContent } from "@/components/history-content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Historia del System Usability Scale" },
+  title: { absolute: "History of the System Usability Scale" },
   description:
-    "Los orígenes de la System Usability Scale: de la herramienta interna de John Brooke en DEC (1986) al estándar global de usabilidad.",
+    "The origins of the System Usability Scale: from John Brooke's internal tool at DEC (1986) to the global usability standard.",
   alternates: { canonical: "/historia" },
 };
 
