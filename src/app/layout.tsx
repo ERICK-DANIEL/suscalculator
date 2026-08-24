@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Hanken_Grotesk, Inter } from "next/font/google";
 import { NavBar } from "@/components/nav-bar";
 import { SiteFooter } from "@/components/site-footer";
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <NavBar />
         <main className="flex w-full flex-1 flex-col">{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
